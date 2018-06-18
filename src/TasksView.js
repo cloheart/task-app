@@ -62,7 +62,7 @@ class TasksView extends Component {
     return(
 
       <div className="tasks-view">
-        <div className="tasks-view-header">All Tasks</div>
+        <div className="tasks-view-header"><h2>All Tasks</h2></div>
         {objTaskNodeArr}
       </div>
 

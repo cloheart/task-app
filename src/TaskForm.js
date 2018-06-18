@@ -106,20 +106,28 @@ class TaskForm extends Component {
     return(
 
       <div className="task-form">
-        New Task Form!
+        <div className="task-form-head">
+          <h2>Create a New Task</h2>
+        </div>
         <form onSubmit={this.fnCreateNewTask}>
         <div className="form-group">
-          <input
-            type="text"
-            className="form-control"
-            ref={(a) => this._inputTitle = a}
-            placeholder="enter title"></input>
+          <label>
+            Title
+            <input
+              type="text"
+              className="form-control"
+              ref={(a) => this._inputTitle = a}
+              placeholder="enter title"></input>
+          </label>
         </div>
         <div className="form-group">
+        <label>
+          Description
           <textarea
             className="form-control"
             ref={(a) => this._inputDescription = a}
             placeholder="enter description"></textarea>
+        </label>
         </div>
         <div className="form-group task-priority-options">
           <p>priority</p>

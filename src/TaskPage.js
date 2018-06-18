@@ -158,37 +158,22 @@ class TaskPage extends Component {
     alert('This is a test!');
   }
 
-/*
-<div className="task-form">
-Task Form!
-  <form onSubmit={this.fnCreateNewTask}>
-  <input
-    type="text"
-    ref={(a) => this._inputTitle = a}
-    placeholder="title"></input>
-  <textarea
-    ref={(a) => this._inputDescription = a}
-    placeholder="description"></textarea>
-
-  <button type="submit">add</button>
-  </form>
-  </div>
-*/
-
   render() {
     return (
 
         <div className="content">
-
-        <TaskForm fnAddNewTask={this.fnAddNewTask}/>
-
+          <h1>Tasks</h1>
+          <div className="task-page">
 
           <TasksView pTasks={this.state.tasks}
                     fnDeleteTask={this.fnDeleteTask}
                     fnToggleTaskActive={this.fnToggleTaskActive}
                     changePriority ={this.fnChangeTaskPriority}
                     fnTest={this.fnTest} />
+
+          <TaskForm fnAddNewTask={this.fnAddNewTask}/>
           </div>
+        </div>
     )
   }
 }

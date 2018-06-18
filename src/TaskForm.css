@@ -4,11 +4,25 @@
   border:1px solid #eee;
   background-color: #eee;
   width:450px;
-  padding:16px;
+  padding-top:16px;
+  padding-bottom:16px;
+  padding-left:16px;
+  padding-right:16px;
+  /*margin:0 auto;*/
+  grid-column: 2/3;
+}
+
+.task-form-head:before
+{
+  content: '\002B';
+  transition: all 0.35s;
+  float:right;
+  font-size:16px;
 }
 
 .form-group
 {
+  margin-top:8px;
   margin-bottom:8px;
 }
 
@@ -19,7 +33,7 @@
   padding:8px;
   line-height: 1.5;
   background-color:#fff;
-  border:1px solid #eee;
+  border:1px solid rgba(0,0,0,.14);
   border-radius:6px;
   border-color: .15s ease-in-out,box-shadow .15s ease-in-out
 }
@@ -56,23 +70,23 @@
 
 .form-btn{
   display: inline-block;
-font-weight: 400;
-text-align: center;
-white-space: nowrap;
-vertical-align: middle;
-user-select: none;
-    border: 1px solid transparent;
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    border-radius: .25rem;
-    transition: color .15s;
-    background-color:#f47e57;
-    color:#fff;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  transition: color .15s;
+  background-color:var(--color-red);
+  color:#fff;
 }
 
 .form-btn:hover{
-  background-color:#f36c3f;
+  background-color:var(--color-red-lighter);
   color:#fff;
 }
 

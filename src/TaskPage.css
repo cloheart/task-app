@@ -1,1 +1,9 @@
 
+.task-page
+{
+  padding-top:24px;
+  display:grid;
+  grid-template-columns: 450px 450px;
+  grid-gap:24px;
+
+}

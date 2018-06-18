@@ -1,3 +1,26 @@
+:root {
+
+  --color-medium-blue:#67D4C8;
+  --color-medium-blue-darker:#38c7b6;
+  --color-light-blue:#8DF3CF;
+  --color-red: #f35b5f;
+  --color-red-lighter:#fab8ba;
+  --color-dark-green:#1D4849;
+}
+
+#sidebar-toggle {
+  display: none;  /*hide the checkbox */
+}
+
+#sidebar {
+  display:block;
+}
+#sidebar-toggle:checked ~ .container .main .sidebar {
+  display:none;
+}
+
+
+
 .container {
   display:grid;
   grid-template-columns: 40px 50px auto 50px 40px;
@@ -14,10 +37,38 @@
   z-index:99;
 
   box-shadow:0 2px 5px rgba(0,0,0,.26);
-  background-color:#f47e57;
+  background-color:var(--color-medium-blue);
+  color:#fff;
   font-size:16px;
   display:grid;
   grid-template-columns: 40px 50px auto 50px 40px;
+}
+
+.sidebar-toggle-label
+{
+  grid-column:2/3;
+  display:inline-block;
+  line-height:0px;
+  margin-top:4px;
+  margin-bottom:8px;
+  border-radius:50%;
+  font-size:24px;
+  cursor:pointer;
+}
+
+.sidebar-toggle-label:hover{
+  background-color:var(--color-red);
+  color:#fff;
+}
+
+.sidebar-toggle-label span {
+  display:inline-block;
+
+  padding-top:50%;
+  padding-bottom:50%;
+  padding-left:4px;
+  margin-left:9px;
+  margin-right:8px;
 }
 
 .header-title
@@ -25,6 +76,13 @@
   grid-column:3/4;
   align-self: center;
   font-size:18px;
+  padding-left:24px;
+
+}
+
+.header-title h1
+{
+  color:#fff;
 }
 
 .main
@@ -34,7 +92,7 @@
   display:grid;
   grid-template-columns: auto 50px 1fr 50px 40px;
   grid-template-areas:
-    "sidebar . content . .";
+    "sidebar . content content .";
 }
 
 .sidebar
@@ -43,25 +101,53 @@
   background-color:#eee;
   width:200px;
   overflow:auto;
-  /*transition: all 1s;
-  border-right:1px solid rgba(0,0,0,.14);
-  */
-
   padding-top:48px;
 }
+
+.sidebar ul
+{
+  margin:0;
+  padding:0;
+  list-style-type: none;
+}
+
+.sidebar ul li
+{
+  font-decoration:none;
+  padding-top:16px;
+  padding-bottom:16px;
+  padding-left:48px;
+  padding-right:16px;
+}
+
+.sidebar ul li:hover
+{
+  background-color:var(--color-red-lighter);
+  color:#fff;
+}
+
+.sidebar ul li.active
+{
+  background-color:var(--color-red);
+  color:#fff;
+}
+
+
 
 .content
 {
   grid-area: content;
   min-height:100%;
   padding-top:24px;
+  padding-bottom:56px;
 }
 
 .footer
 {
   grid-area: footer;
-  border-top:1px solid rgba(0,0,0,.14);;
-  padding:10px;
+  padding:8px;
+  background-color:var(--color-medium-blue);
+  color:#fff;
 }
 
 .card

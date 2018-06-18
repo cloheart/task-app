@@ -18,11 +18,19 @@ class App extends Component {
     return (
        <React.Fragment>
         <header className="header">
+          <label for="sidebar-toggle" class="sidebar-toggle-label"><span>&#9776;</span></label>
           <HeaderTitle />
         </header>
         <div className="main">
-          <div className="sidebar"></div>
-        <TaskPage />
+          <div id="sidebar" className="sidebar">
+            <ul>
+              <li>Projects</li>
+              <li className="active">Tasks</li>
+              <li>Orders</li>
+              <li>Maintenance</li>
+            </ul>
+          </div>
+          <TaskPage />
         </div>
         <Footer />
        </React.Fragment>
