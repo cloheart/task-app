@@ -1,0 +1,244 @@
+.task
+{
+  width:424px;
+  margin:0 auto;
+  border:1px solid #ccc;
+  background-color:#fff;
+  padding:16px;
+  border-radius:4px;
+  margin-bottom:8px;
+  transition: all 0.35s;
+}
+
+.task.active{
+  width:100%;
+  border-radius:0px;
+  height:auto;
+}
+
+.task-head
+{
+  cursor:pointer;
+  user-select: none;
+}
+
+.task-head > div{display:inline-block;}
+
+.task-head:after
+{
+  content: '\002B';
+  transition: all 0.35s;
+  float:right;
+}
+
+.task.active .task-head:after{
+    transform: rotate(315deg);
+}
+
+.task-body
+{
+  max-height:0;
+  overflow:hidden;
+  transition: max-height 0.2s ease-out;
+  transition: padding-top 0.1s ease-out;
+}
+
+.task.active .task-body
+{
+  overflow:auto;
+  padding-top: 8px;
+  padding-left:8px;
+  padding-right:8px;
+  padding-bottom:0px;
+  max-height: 100%;
+  overflow:visible;
+
+}
+
+.task-body-details
+{
+  font-size:12px;
+  font-style: italic;
+}
+
+.task-body-details > span {margin-right:8px;}
+
+.task-priority-text
+{
+  font-size:12px;
+  font-style: italic;
+
+}
+
+.task-priority-high
+{
+
+  color:#721c24;
+  border-color: #f2a7b6;
+  border-width:2px;
+  border-top-color:transparent;
+  border-right-color:transparent;
+
+}
+
+.task-priority-high.active
+{
+  background-color:#f2a7b6;
+}
+
+.task-priority-medium
+{
+  color: #004085;
+  border-color: #b8daff;
+  border-width:2px;
+  border-top-color:transparent;
+  border-right-color:transparent;
+}
+
+.task-priority-medium.active
+{
+  background-color: #cce5ff;
+}
+
+.task-priority-low
+{
+  color: #155724;
+  border-color: #c3e6cb;
+  border-width:2px;
+  border-top-color:transparent;
+  border-right-color:transparent;
+}
+
+.task-priority-low.active
+{
+  background-color: #d4edda;
+}
+
+.task-actions
+{
+  padding-left:50%;
+
+}
+
+.task-actions > div{display:inline-block;clear:both;}
+
+.task-action-change-priority
+{
+  position: relative;
+}
+
+.task-action-change-priority-options {
+    display: none;
+    position: absolute;
+    box-shadow: var(--box-shadow);
+    background-color:#fff;
+    min-width: 160px;
+    z-index: 1;
+    overflow: visible;
+}
+
+.task-action-change-priority:hover .task-action-change-priority-options  {display: block;}
+
+.task-action-change-priority-options ul{margin:0;padding:0;}
+
+.task-action-change-priority-options ul li {
+    padding: 8px 16px;
+    text-decoration: none;
+    display: block;
+    cursor:pointer;
+}
+
+/* base style for task action buttons */
+.task-action-button
+{
+  padding-left:8px;
+  padding-right:8px;
+  padding-top:8px;
+  padding-bottom:8px;
+  border:1px solid transparent;
+  border-radius:4px;
+  background-color:transparent;
+  cursor:pointer;
+  display:inline-block;
+}
+
+/*button-task-delete hover colors */
+/*base */
+.task-action-button:hover
+{
+  border:1px solid #f5f5f;
+  background-color: #eee;
+  color:#f3f3f;
+  transition: background-color 0.15s;
+}
+
+/* green */
+.task-priority-low .task-action-button:hover
+{
+  background-color:#155724;
+  color:#fff;
+}
+
+/* blue */
+.task-priority-medium .task-action-button:hover
+{
+  background-color:#004085;
+  color:#fff;
+}
+
+/* red */
+.task-priority-high .task-action-button:hover
+{
+  background-color:#721c24;
+  color:#fff;
+}
+
+/* change priority options hover base
+.task-action-change-priority-options a:hover {background-color: #eee;}*/
+
+/* change priority options button base*/
+.task-action-change-priority:hover .task-action-button
+{
+  background-color:#eee;
+}
+/* green */
+.task-priority-low .task-action-change-priority:hover .task-action-button
+{
+  background-color:#155724;
+  color:#fff;
+}
+
+/* blue */
+.task-priority-medium .task-action-change-priority:hover .task-action-button
+{
+  background-color:#004085;
+  color:#fff;
+}
+
+/* red */
+.task-priority-high .task-action-change-priority:hover .task-action-button
+{
+  background-color:#721c24;
+  color:#fff;
+}
+
+/* change priority options :hover */
+.task-action-change-priority-option:hover
+{
+  background-color: #eee;
+}
+.task-action-change-priority-option-low:hover
+{
+  background-color:#155724;
+  color:#fff;
+}
+.task-action-change-priority-option-medium:hover
+{
+  background-color:#004085;
+  color:#fff;
+}
+.task-action-change-priority-option-high:hover
+{
+  background-color:#721c24;
+  color:#fff;
+}

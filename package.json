@@ -2,7 +2,7 @@
   "name": "task-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/cloheart/mira",
+  "homepage": "https://cloheart.github.io/task-app",
   "dependencies": {
     "react": "^16.4.1",
     "react-dom": "^16.4.1",

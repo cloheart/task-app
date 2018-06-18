@@ -70,6 +70,11 @@
   padding:24px;
 }
 
+.disp-flex
+{
+  display:flex;
+}
+
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }

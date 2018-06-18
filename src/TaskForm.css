@@ -1,0 +1,81 @@
+
+.task-form
+{
+  border:1px solid #eee;
+  background-color: #eee;
+  width:450px;
+  padding:16px;
+}
+
+.form-group
+{
+  margin-bottom:8px;
+}
+
+.form-control
+{
+  display:block;
+  width:100%;
+  padding:8px;
+  line-height: 1.5;
+  background-color:#fff;
+  border:1px solid #eee;
+  border-radius:6px;
+  border-color: .15s ease-in-out,box-shadow .15s ease-in-out
+}
+
+.task-priority-options p
+{
+  margin:0;
+  padding:0;
+}
+
+.task-priority-options > label {
+  display:inline-block;
+  /*border:1px solid #fff;*/
+  padding:4px 8px;
+  border-radius:4px;
+  cursor:pointer;
+}
+
+.task-priority-options label.high:hover{
+  background-color:#f2a7b6;
+  border-color:#eee;
+  color:#721c24;
+}
+
+.task-priority-options input[type="radio"]:checked+label   {
+    background-color: red;
+}
+
+
+.task-priority-options input[type=radio]{
+  /*display:none;*/
+}
+
+
+.form-btn{
+  display: inline-block;
+font-weight: 400;
+text-align: center;
+white-space: nowrap;
+vertical-align: middle;
+user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s;
+    background-color:#f47e57;
+    color:#fff;
+}
+
+.form-btn:hover{
+  background-color:#f36c3f;
+  color:#fff;
+}
+
+.btn-right{
+  margin-left:auto;
+}
