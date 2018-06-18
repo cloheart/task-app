@@ -4,15 +4,15 @@ import './App.css';
 import TaskPage from "./TaskPage";
 
 //move this to new file
-const HeaderTitle = () => {
+const AppHeader = () => {
   return (
-      <React.Fragment>
-      <div><label for="sidebar-toggle" class="sidebar-toggle-label"><span>&#9776;</span></label></div>
-      <div className="header-title">
-      <h1>MIRA</h1>
-      </div>
-      <div className="header-name-span">Hi Max!</div>
-      </React.Fragment>
+      <header className="header">
+        <div className="header-sidebar-toggle"><label for="sidebar-toggle" class="sidebar-toggle-label"><span>&#9776;</span></label></div>
+        <div className="header-title">
+          <h1>MIRA</h1>
+        </div>
+        <div className="header-name-span">Hi Max!</div>
+      </header>
     );
 }
 
@@ -25,10 +25,9 @@ class App extends Component {
   render() {
     return (
        <React.Fragment>
-        <header className="header">
 
-          <HeaderTitle />
-        </header>
+       <AppHeader />
+
         <div className="main">
           <div id="sidebar" className="sidebar">
             <ul>
