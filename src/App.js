@@ -5,7 +5,15 @@ import TaskPage from "./TaskPage";
 
 //move this to new file
 const HeaderTitle = () => {
-  return (<div className="header-title"><h1>MIRA</h1></div>);
+  return (
+      <React.Fragment>
+      <div><label for="sidebar-toggle" class="sidebar-toggle-label"><span>&#9776;</span></label></div>
+      <div className="header-title">
+      <h1>MIRA</h1>
+      </div>
+      <div className="header-name-span">Hi Max!</div>
+      </React.Fragment>
+    );
 }
 
 const Footer = () => {
@@ -18,7 +26,7 @@ class App extends Component {
     return (
        <React.Fragment>
         <header className="header">
-          <label for="sidebar-toggle" class="sidebar-toggle-label"><span>&#9776;</span></label>
+
           <HeaderTitle />
         </header>
         <div className="main">

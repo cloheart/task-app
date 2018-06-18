@@ -10,6 +10,7 @@
   padding-right:16px;
   /*margin:0 auto;*/
   grid-column: 2/3;
+  box-shadow:var(--box-shadow);
 }
 
 .task-form-head:before
@@ -86,7 +87,7 @@
 }
 
 .form-btn:hover{
-  background-color:var(--color-red-lighter);
+  background-color:var(--color-red-darker);
   color:#fff;
 }
 

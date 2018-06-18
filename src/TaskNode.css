@@ -1,6 +1,7 @@
 .task
 {
   width:95%;
+  min-width:200px;
   margin-top:0px;
   margin-right:auto;
   margin-left:auto;

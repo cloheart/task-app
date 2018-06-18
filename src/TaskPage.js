@@ -6,29 +6,46 @@ import './TaskPage.css';
 //set up sample data
 const objSampleTaskArr = [
   {
-    title: 'Go to a movie!',
-    description:'Sometimes when we need something to do, we decide to go check out a new movie film! There are a lot of good movies... but also quite a few bad ones. Soemtimes they are so bad that I feel like leaving... the last time I left was Fast and the Furious 17.',
+    title: 'Add functionality to task nodes',
+    description:'I would have liked to finish functionality of the actual tasks, like being able to add sub-tasks, etc.',
+    priority: 3,
+    active: false,
+    dueDate:"2018-06-18 00:00:00",
+    key: Date.now()+2
+  },
+  {
+    title: 'Finish the footer...',
+    description:'It is there to show that I have control over to grid setup.',
     priority: 2,
     active: false,
     dueDate:"2018-05-27 00:00:00",
     key: Date.now()
   },
   {
-    title: 'Change cat litter',
-    description:'Cats are wonderful creatures that I love very much... but...',
-    priority: 0,
+    title: 'Make task form closeable',
+    description:'I would have liked to make the task form itself toggleable like the individual tasks are.',
+    priority: 1,
     active: false,
     dueDate:"2018-04-23 00:00:00",
+    key: Date.now()+1
+  },
+  {
+    title: 'React radio buttons',
+    description:'React handles radio buttons differently than I expected. I am able to change the hover property, but changing label color on change proved to be more difficult. The syntax for the css selector would take time.',
+    priority: 2,
+    active: false,
+    dueDate:"2018-06-18 00:00:00",
     key: Date.now()+2
   },
   {
-    title: 'Finish this project!',
-    description:'Woah, this has been a journey!',
-    priority: 1,
+    title: 'Change the radio button colors...',
+    description:'I know it is doable, but time is a resource I am running out of!',
+    priority: 2,
     active: false,
-    dueDate:"2018-03-21 00:00:00",
-    key: Date.now()+1
+    dueDate:"2018-06-18 00:00:00",
+    key: Date.now()+2
   }
+
 ];
 
 class TaskPage extends Component {
