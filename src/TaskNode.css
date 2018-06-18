@@ -1,12 +1,14 @@
 .task
 {
-  width:424px;
-  margin:0 auto;
+  width:95%;
+  margin-top:0px;
+  margin-right:auto;
+  margin-left:auto;
+  margin-bottom:16px;
   border:1px solid #ccc;
   background-color:#fff;
   padding:16px;
   border-radius:4px;
-  margin-bottom:8px;
   transition: all 0.35s;
 }
 
